@@ -9,5 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "react-tsparticles": "^2.12.2",
+    "tsparticles": "^4.2.1"
+  }
 }
