@@ -1,0 +1,404 @@
+/* ===========================
+   Google Font
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   Reset
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    min-height:100vh;
+
+    color:white;
+
+    overflow-x:hidden;
+
+    background:
+    linear-gradient(
+        135deg,
+        #071B44 0%,
+        #0B4D91 45%,
+        #00B7FF 100%
+    );
+
+    background-attachment:fixed;
+
+}
+
+/* ===========================
+   Animated Background
+=========================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:600px;
+
+    height:600px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    top:-220px;
+
+    right:-200px;
+
+    filter:blur(80px);
+
+    animation:moveOne 18s infinite alternate;
+
+    z-index:-1;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:rgba(0,255,255,.08);
+
+    bottom:-180px;
+
+    left:-180px;
+
+    filter:blur(80px);
+
+    animation:moveTwo 16s infinite alternate;
+
+    z-index:-1;
+
+}
+
+@keyframes moveOne{
+
+0%{
+
+transform:translate(0,0);
+
+}
+
+100%{
+
+transform:translate(-120px,120px);
+
+}
+
+}
+
+@keyframes moveTwo{
+
+0%{
+
+transform:translate(0,0);
+
+}
+
+100%{
+
+transform:translate(120px,-120px);
+
+}
+
+}
+
+/* ===========================
+   Dashboard
+=========================== */
+
+.dashboard{
+
+    width:100%;
+
+    max-width:1450px;
+
+    margin:auto;
+
+    padding:30px;
+
+}
+
+/* ===========================
+   Grid
+=========================== */
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:400px 1fr;
+
+    gap:25px;
+
+    margin-top:25px;
+
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.left-panel,
+.right-panel,
+.forecast-panel{
+
+    background:rgba(255,255,255,.10);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    border-radius:28px;
+
+    box-shadow:
+
+    0 12px 30px rgba(0,0,0,.20),
+
+    inset 0 1px 1px rgba(255,255,255,.10);
+
+    transition:.35s;
+
+}
+
+.left-panel{
+
+    min-height:620px;
+
+}
+
+.right-panel{
+
+    min-height:620px;
+
+}
+
+.forecast-panel{
+
+    margin-top:30px;
+
+    min-height:280px;
+
+    padding:25px;
+
+}
+
+/* ===========================
+   Hover Effect
+=========================== */
+
+.left-panel:hover,
+.right-panel:hover,
+.forecast-panel:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,.30),
+
+    inset 0 1px 1px rgba(255,255,255,.15);
+
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#5FCBFF;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:1200px){
+
+.dashboard-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.left-panel,
+.right-panel{
+
+min-height:auto;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.dashboard{
+
+padding:15px;
+
+}
+
+.forecast-panel{
+
+padding:15px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.dashboard{
+
+padding:10px;
+
+}
+
+}
+/* ==========================================
+   Dynamic Weather Themes
+========================================== */
+
+body{
+
+    transition:
+        background 0.8s ease,
+        color 0.5s ease;
+
+}
+
+/* ☀ Clear */
+
+body.clear{
+
+    background:
+    linear-gradient(
+        135deg,
+        #2193b0,
+        #6dd5ed
+    );
+
+}
+
+/* ☁ Clouds */
+
+body.clouds{
+
+    background:
+    linear-gradient(
+        135deg,
+        #4b6cb7,
+        #182848
+    );
+
+}
+
+/* 🌧 Rain */
+
+body.rain{
+
+    background:
+    linear-gradient(
+        135deg,
+        #232526,
+        #414345
+    );
+
+}
+
+/* ⛈ Storm */
+
+body.storm{
+
+    background:
+    linear-gradient(
+        135deg,
+        #141e30,
+        #243b55
+    );
+
+}
+
+/* ❄ Snow */
+
+body.snow{
+
+    background:
+    linear-gradient(
+        135deg,
+        #c9d6ff,
+        #e2e2e2
+    );
+
+}
+
+/* 🌙 Night */
+
+body.night{
+
+    background:
+    linear-gradient(
+        135deg,
+        #020024,
+        #090979,
+        #000000
+    );
+
+}
+
+/* Smooth transition */
+
+.current-weather-section,
+.highlights-section,
+.forecast-section,
+.navbar{
+
+    transition:
+        background .5s ease,
+        box-shadow .5s ease,
+        transform .3s ease;
+
+}

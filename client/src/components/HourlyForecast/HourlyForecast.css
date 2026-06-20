@@ -1,0 +1,103 @@
+.hourly-wrapper{
+
+    width:100%;
+
+}
+
+.hourly-wrapper h2{
+
+    color:white;
+
+    margin-bottom:20px;
+
+    font-size:28px;
+
+}
+
+.hourly-scroll{
+
+    display:flex;
+
+    gap:18px;
+
+    overflow-x:auto;
+
+    padding-bottom:12px;
+
+}
+
+.hourly-scroll::-webkit-scrollbar{
+
+    height:7px;
+
+}
+
+.hourly-scroll::-webkit-scrollbar-thumb{
+
+    background:#6FD4FF;
+
+    border-radius:20px;
+
+}
+
+.hour-card{
+
+    min-width:150px;
+
+    padding:22px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    text-align:center;
+
+    transition:.35s;
+
+    flex-shrink:0;
+
+}
+
+.hour-card:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.hour-card p{
+
+    color:#E5F5FF;
+
+    font-size:16px;
+
+}
+
+.hour-icon{
+
+    font-size:65px;
+
+    color:#FFD54F;
+
+    margin:15px 0;
+
+}
+
+.hour-card h3{
+
+    color:white;
+
+    font-size:30px;
+
+}
+
+.hour-card span{
+
+    color:#D6F1FF;
+
+}
